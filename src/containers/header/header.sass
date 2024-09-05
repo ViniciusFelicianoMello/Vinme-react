@@ -1,0 +1,237 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+@use '../../styles/keyframes'
+
+.header
+    @include mixins.flex-center
+    @include mixins.padding
+    position: fixed
+    z-index: 100
+    width: 100%
+    height: 7vh
+    background: var(--color-dark)
+    color: var(--color-light)
+    @include mixins.shadow-box
+    opacity: 0
+    &.visible
+        animation: slideDown .7s forwards ease-out, opacity 1s forwards
+    .header_logo 
+        left: 10vw
+        @include mixins.flex-center
+        text-decoration: none
+        position: absolute
+        &:hover
+            .header_logo_svg
+                transform: rotateY(180deg)
+            .header_logo_title
+                transform: translateX(.4em)
+        .header_logo_svg
+            height: 5vh
+            transition: all 0.5s
+        .header_logo_title
+            height: 2.7vh
+            transition: all 0.5s
+            margin-left: .5em
+
+    .header_options
+        @include mixins.flex-center
+        .options_list    
+            position: relative
+            @include mixins.flex-center
+            list-style: none
+            gap: 3em
+            .options_item
+                @include mixins.flex-center
+                flex-direction: column
+                text-decoration: none
+                font-family: var(--fonte-2)
+                color: var(--cor-fixa-2)
+                transition: 0.5s
+                font-size: 1.1vw
+                cursor: pointer
+                &:hover
+                    color: var(--color-main-1)
+                    border-bottom: 2px solid var(--color-main-1)
+                    transform: translateY(-.2em)
+            .options_item_active
+                color: var(--color-main)
+                border-bottom: 2px solid var(--color-main)
+
+    .header_controls
+        @include mixins.flex-center
+        position: absolute
+        right: 10vw
+        .dark_mode_but
+            @include mixins.flex-center
+            .dark_chk
+                &:checked ~ .dark_label
+                    .icon-sun
+                        display: none
+                    .icon-moon
+                        display: block
+            .dark_label
+                @include mixins.flex-center
+                i
+                    cursor: pointer
+                    transition: all .3s 
+                    &:hover
+                        color: var(--color-main-1)
+                .icon-moon
+                    display: none
+.header_menu
+    display: none
+@media screen and ( max-width: 1024px )
+    .header
+        bottom: 0
+        height: 10vw
+        &.visible
+            animation: slideUp1 1s forwards, opacity 1s forwards
+        .header_options
+            display: none
+        .header_logo
+            left: 2vw
+            .header_logo_svg
+                height: 6vw
+            .header_logo_title
+                width: 13vw
+        .header_controls
+            right: 2vw
+            .dark_mode_but
+                .dark_label
+                    i
+                        font-size: 5vw
+    
+    .header_menu
+        display: block
+        position: fixed
+        z-index: 100
+        right: 0em
+        top: 0em
+        .check-icon 
+            &:checked ~
+                .icon_menu 
+                    .bar
+                        &:nth-of-type(1)
+                            transform: translateY(.8em) rotate(45deg)
+                            background: var(--color-main)
+                        &:nth-of-type(2)
+                            transform: translateX(-100vw)
+                            opacity: 0
+                        &:nth-of-type(3)
+                            transform: translateY(-.8em) rotate(-45deg)
+                            background: var(--color-main)
+                .menu_options 
+                    transform: translateX(0)
+
+        .icon_menu
+            position: relative
+            cursor: pointer
+            @include mixins.flex-center
+            flex-direction: column
+            margin: 1em
+            .bar
+                position: relative
+                z-index: 110
+                margin-top: 0.5em
+                height: .3em
+                width: 3em
+                border-radius: 1em
+                transition: 0.5s
+                background: var(--color-font)
+
+        .menu_options
+            position: absolute
+            top: 0
+            margin: 0 0 0 -93vw
+            height: 100vh
+            width: 40vw
+            background: var(--color-dark)
+            box-shadow: var(--color-shadow-1)
+            transition: 1s
+            transform: translateX(-100%)
+            .dropdown_options_list 
+                position: relative
+                display: flex
+                flex-direction: column
+                max-width: max-content
+                gap: 0
+                margin-top: 2em
+                .options_item
+                    display: flex
+                    justify-content: start
+                    position: relative
+                    margin: 0 0 0 1em
+                    font-size: 3vw
+                    width: 33vw
+                    padding: 1em 
+                    color: var(--color-light)
+                    text-decoration: none
+                    &:hover
+                        color: var(--color-main-1)
+                    .option_title
+                        position: absolute
+                        left: 3em
+                .options_item_active
+                    color: var(--color-main)
+
+
+@media screen and ( max-width: 600px )
+    .header
+        height: 15vw
+        &.visible
+            animation: slideUp1 1s forwards, opacity 1s forwards
+        .header_logo
+            left: 2vw
+            .header_logo_svg
+                height: 10vw
+            .header_logo_title
+                display: none
+        .header_controls
+            right: 2vw
+            .dark_mode_but
+                .dark_label
+                    i
+                        font-size: 9vw
+
+    .header_menu
+        display: block
+        position: fixed
+        z-index: 100
+        right: 0em
+        top: 0em
+        .check-icon 
+            &:checked ~
+                .icon_menu 
+                    .bar
+                        &:nth-of-type(1)
+                            transform: translateY(.5em) rotate(45deg)
+                            background: var(--color-main)
+                        &:nth-of-type(2)
+                            transform: translateX(-100vw)
+                            opacity: 0
+                        &:nth-of-type(3)
+                            transform: translateY(-.5em) rotate(-45deg)
+                            background: var(--color-main)
+                .menu_options 
+                    transform: translateX(0)
+
+        .icon_menu
+            margin: .5em
+            .bar
+                position: relative
+                z-index: 110
+                margin-top: 0.3em
+                height: .2em
+                width: 2em
+                border-radius: 1em
+                transition: 0.5s
+                background: var(--color-font)
+
+        .menu_options
+            margin: 0 0 0 -89vw
+            width: 70vw
+            .dropdown_options_list
+                .options_item
+                    font-size: 5vw
+                    width: 63vw
+                    padding: .7em

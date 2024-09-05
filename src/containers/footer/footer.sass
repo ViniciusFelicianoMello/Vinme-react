@@ -1,0 +1,149 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+@use '../../styles/keyframes'
+
+.footer 
+    @include mixins.flex-center
+    @include mixins.padding
+    flex-direction: column
+    justify-content: space-between
+    position: relative
+    z-index: 99
+    width: 100%
+    height: 60vh
+    background: var(--color-dark)
+    box-shadow: var(--color-shadow-1)
+    color: var(--color-light)
+    .footer_social
+        @include mixins.flex-center
+        position: absolute
+        margin-top: -5vh
+        width: 60vw
+        height: 10vh
+        background: var(--color-main)
+        border: 2px solid var(--color-dark)
+        border-radius: 2em
+        box-shadow: var(--color-shadow-1)
+        ul
+            @include mixins.flex-center
+            justify-content: space-evenly
+            width: 100%
+            font-size: 1.5vw
+            list-style: none
+            a
+                @include mixins.flex-center
+                color: var(--color-dark)
+                height: 3vw
+                width: 3vw
+                border: 2px solid var(--cor-fixa-1)
+                border-radius: 50%
+                text-decoration: none
+                transition: .3s
+                &:hover
+                       transform: translateY(-0.2em)
+                        box-shadow: var(--color-shadow-1)
+                        background: var(--color-main-1)
+
+    .footer_infos
+        @include mixins.flex-center
+        justify-content: space-between
+        flex-wrap: wrap
+        border-bottom: 2px solid var(--color-main)
+        padding-bottom: 2em
+        width: 100%
+        height: 80%
+        .footer_logo
+            margin-top: 5vh
+            display: flex
+            align-items: center
+            flex-direction: column
+            width: 25%
+            height: 70%
+            img
+                width: 50%
+        .footer_links
+            margin-top: 10vh
+            display: flex
+            align-items: center
+            flex-direction: column
+            width: 25%
+            height: 70%
+            border-left: 2px solid var(--color-main)
+            .footer_links_title
+                font-size: .8vw
+                margin-top: -2vh
+                font-family: var(--font-1)
+            ul
+                display: flex
+                justify-content: center
+                flex-direction: column
+                gap: .8em
+                margin-top: 1em
+                font-family: var(--font-2)
+                .footer_link 
+                    position: relative
+                    text-decoration: none
+                    color: var(--cor-principal-2)
+                    font-size: 1.2vw
+                    transition: .3s
+                    text-transform: lowercase
+                    &:hover
+                        border-bottom: 1px solid var(--color-main-1)
+                        color: var(--color-main-1)
+                        transform: translateY(-0.2em)
+                    strong
+                        margin-left: .5em
+
+    .footer_copyright
+        height: 20%
+        @include mixins.flex-center
+        span
+            font-size: 1vw
+            font-family: var(--font-3)
+            @include mixins.gradient_text
+
+@media screen and ( max-width: 1024px )
+    .footer
+        .footer_social
+            border-radius: 4em
+            ul
+                font-size: 4vw
+                a
+                    height: 7vw
+                    width: 7vw
+
+        .footer_infos
+            width: 100%
+            height: 90%
+            .footer_logo
+                margin-top: 6vh
+                width: 50%
+                height: 35%
+                img
+                    width: 30%
+            .footer_links
+                margin-top: 6vh
+                width: 50%
+                height: 35%
+                .footer_links_title
+                    font-size: 2vw
+                    margin-top: 0
+                ul
+                    .footer_link 
+                        font-size: 2.5vw
+
+        .footer_copyright
+            height: 10%
+            span
+                font-size: 3vw
+@media screen and ( max-width: 600px )
+    .footer
+        height: 70vh
+        .footer_social
+            height: 8vh
+
+        .footer_infos
+            .footer_links
+                ul
+                    .footer_link 
+                        font-size: 3vw

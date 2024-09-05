@@ -1,0 +1,48 @@
+@use 'variables'
+@use 'keyframes'
+
+@mixin flex-center
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin padding
+  padding: 0 10vw
+  @media (max-width: 1024px)
+    padding: 0 2vw
+  @media (max-width: 600px)
+    padding: 0 1vw
+
+@mixin shadow-box
+  box-shadow: 0 0 8px var(--color-shadow-1), 0 0 8px var(--color-shadow-1)
+@mixin shadow-box-2
+  box-shadow: 0 0 6px var(--color-main-1), 0 0 6px var(--color-main-1)
+
+@mixin gradient 
+  background: var(--gradient-1)
+  background-size: 400% 100%
+  background-position: 0% 50%
+  animation: btn 5s linear infinite
+  color: var(--color-bg-3)
+  transition: all .5s
+
+@mixin gradient_text
+  background: var(--gradient-1)
+  background-size: 400% 100%
+  background-position: 0% 50%
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  color: transparent
+  animation: btn 5s linear infinite
+  transition: all .5s
+  color: var(--color-bg-3)
+
+@mixin gradient_hover
+  background: var(--gradient-2)
+  background-size: 400% 100%
+  background-position: 0% 50%
+  animation: btn 5s linear infinite
+  box-shadow: var(--neon-inset-1)
+  color: var(--color-bg-5)
+  transform: translateY(.3em)
