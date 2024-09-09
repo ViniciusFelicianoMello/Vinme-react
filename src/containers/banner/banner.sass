@@ -106,6 +106,9 @@
                 margin-top: 4em
                 transition: all .3s
                 width: 33vw
+                opacity: 0
+                &.visible
+                    animation: slideUp 1s 3s ease-in forwards, opacity 1s 3s ease-in forwards
 
         .banner_svg
             position: absolute
@@ -117,7 +120,88 @@
             img
                 height: 45vw
 
+    .banner_infos
+        position: relative
+        @include mixins.flex-center
+        gap: 5rem
+        width: 100%
+        margin-top: -12rem
+        height: 15em
 
+@media screen and ( max-width: 1024px )
+    .banner
+        height: 80vh
+        padding: 1rem 1vw
+        .banner_box
+            display: flex
+            height: 90%
+            padding: 0vw
+            border-radius: 1em
+            margin: 0
+            .banner_links
+                justify-content: start
+                margin-top: 7vh
+                .banner_link
+                    i  
+                        font-size: 3vw
+                        width: 6vw
+                        height: 6vw
+
+            .banner_text
+                padding: 5em 4em
+                width: 100%
+                .banner_text_box
+                    border-radius: 1em
+                    width: 90vw
+                    margin-left: -1em
+                    padding: 1em 2em
+                    h2
+                        font-size: 4.3vw
+
+                    p
+                        font-size: 2.4vw
+                        &:nth-of-type(1)
+                            &.visible
+                                margin-top: 4em
+
+                .banner_text_btn 
+                    width: 65vw
+                    margin-top: 4em
+                    margin-left: 9%
+
+            .banner_svg
+                right: 19%
+                bottom: 0
+                img
+                    height: 60vw
+
+        .banner_infos
+            gap: 2vw
+            margin-top: -8rem
+
+@media screen and ( max-width: 600px )
+    .banner
+        .banner_box
+            .banner_links
+                .banner_link
+                    i  
+                        font-size: 5vw
+                        width: 9vw
+                        height: 9vw
+
+            .banner_text
+                padding: 2em 1em
+                .banner_text_box
+                    margin-left: -.5em
+                    padding: 1em 1em
+
+                .banner_text_btn 
+                    margin-top: 2em
+
+            .banner_svg
+                right: 9%
+                img
+                    height: 80vw
 
 
 

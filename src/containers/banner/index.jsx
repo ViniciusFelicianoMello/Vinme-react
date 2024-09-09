@@ -4,6 +4,7 @@ import { social_links } from '../../utils/data';
 import Universe from '../universe';
 import './banner.sass'
 import Button from '../../components/button';
+import BannerInfos from './components';
 
 const Banner = () => {
   const [isOnScreen, ref] = useOnScreen({ threshold: 0.1 });
@@ -42,7 +43,7 @@ const Banner = () => {
       </div>
 
       <div className="banner_infos">
-
+          <BannerInfos/>
       </div>
     </section>
   )

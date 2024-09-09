@@ -26,3 +26,10 @@ export const vinme_infos = [
   { id: 4, text: 'São Paulo, SP, Brasil', icon: 'fa-solid fa-location-dot', url: 'https://www.google.com/maps/place/S%C3%A3o+Paulo,+Brasil', target: "_blank" },
   { id: 5, text: '8:00 - 18:00', icon: 'fa-solid fa-clock', url: '/contact', target: "" },
 ]
+
+// BANNER
+export const info_boxes = [
+  {id: 1, img: "svg/VINMEFRONT.svg", alt: "Frontend", icon: "fa-solid fa-code", title: "Front-End"},
+  {id: 2, img: "svg/VINMEDESIGN.svg", alt: "Design", icon: "fa-solid fa-pen-nib", title: "Design"},
+  {id: 3, img: "svg/VINMEBACK.svg", alt: "Backend", icon: "fa-solid fa-keyboard", title: "Back-End"},
+]
