@@ -1,0 +1,22 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+@use '../../styles/keyframes'
+
+.button
+    width: 100%
+    height: 100%
+    cursor: pointer
+    border-radius: .5rem
+    @include mixins.gradient
+    border: none
+    outline: none
+    text-decoration: none
+    font-weight: 400
+    font-family: var(--font-3)
+    font-size: 1.2vw
+    padding: .5em 0
+    @include mixins.flex-center
+    @include mixins.shadow-box
+    &:hover
+        @include mixins.gradient_hover
+        transform: translateY(3px)

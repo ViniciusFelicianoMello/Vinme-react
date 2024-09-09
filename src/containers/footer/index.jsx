@@ -52,7 +52,7 @@ const Footer = () => {
           <h2 className="footer_links_title">INFOS</h2>
           <ul>
             {vinme_infos.map(link => (
-              <Link key={link.id} className='footer_link' to={link.url}>
+              <Link key={link.id} target={link.target} className='footer_link' to={link.url}>
                 <i className={link.icon}></i>
                 <strong>{link.text}</strong>
               </Link>

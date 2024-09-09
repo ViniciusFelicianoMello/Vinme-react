@@ -1,0 +1,124 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+@use '../../styles/keyframes'
+
+.banner
+    position: relative
+    width: 100%
+    min-height: 100vh
+    max-height: max-content
+    padding: 0vw 1vw
+    overflow: hidden
+    .banner_box
+        position: relative
+        display: flex
+        height: 85vh
+        padding: 0 9vw
+        background: var(--color-bg-3)
+        border-radius: 1em
+        @include mixins.shadow-box
+        overflow: hidden
+        margin: 5em 0
+        opacity: 0
+        &.visible
+            animation: slideDown 1s .5s forwards ease-in-out, opacity 1s .5s forwards ease
+        .banner_links
+            position: relative
+            @include mixins.flex-center
+            gap: 4vh
+            flex-direction: column
+            .banner_link
+                opacity: 0
+                text-decoration: none
+                &:nth-of-type(1)
+                    animation: slideRight .7s 1.3s ease-in forwards, opacity .7s 1.3s ease-in forwards
+                &:nth-of-type(2)
+                    animation: slideRight .7s 1.6s ease-in forwards, opacity .7s 1.6s ease-in forwards
+                &:nth-of-type(3)
+                    animation: slideRight .7s 1.9s ease-in forwards, opacity .7s 1.9s ease-in forwards
+                &:nth-of-type(4)
+                    animation: slideRight .7s 2.2s ease-in forwards, opacity .7s 2.2s ease-in forwards
+                i
+                    @include mixins.flex-center
+                    color: var(--color-main)
+                    font-size: 1.3vw
+                    transition: 0.3s
+                    background: var(--color-bg-1)
+                    border-radius: 50%
+                    width: 2.5vw
+                    height: 2.5vw
+                    @include mixins.shadow-box
+                    &:hover
+                        color: var(--color-main-2)
+                        transform: translateY(-0.2em)
+                        @include mixins.shadow-box-2
+                        background: var(--color-bg-3)
+
+        .banner_text
+            position: relative
+            padding: 4em
+            width: 60vw
+            .banner_text_box
+                position: relative
+                border-radius: 1em
+                width: 55vw
+                padding: 1em 2em
+                @include mixins.shadow-box
+                background: var(--color-bg-3)
+                h2
+                    font-family: var(--font-1)
+                    font-size: 2.5vw
+                    font-weight: 400
+                    white-space: nowrap
+                    display: inline-block
+                    overflow: hidden
+                    max-width: 0
+                    &:nth-of-type(1)
+                        &.visible
+                            animation: typing 1s 2s steps(80, end) forwards
+                    &:nth-of-type(2)
+                        &.visible
+                            animation: typing 1s 2.5s steps(80, end) forwards, blink 1.5s step-end infinite
+                            border-right: 2px solid var(--color-font)
+
+                p
+                    font-family: var(--fonte-2)
+                    font-size: 1.5vw
+                    white-space: nowrap
+                    display: inline-block
+                    overflow: hidden
+                    max-width: 0   
+                    &:nth-of-type(1)
+                        &.visible
+                            animation: typing 1s 3.1s steps(80, end) forwards
+                            margin-top: 1.5em
+                    &:nth-of-type(2)
+                        &.visible
+                            animation: typing 1s 3.8s steps(80, end) forwards, blink 1.5s step-end infinite
+                            border-right: 2px solid var(--color-font)
+                
+                .typing
+                    @include mixins.gradient_text
+                    font-weight: 700
+
+            .banner_text_btn 
+                position: absolute
+                margin-top: 4em
+                transition: all .3s
+                width: 33vw
+
+        .banner_svg
+            position: absolute
+            right: -7vw
+            opacity: 0
+            align-self: center
+            &.visible
+                animation: slideLeft 1s 3.2s linear forwards, opacity 1s 3.2s linear forwards
+            img
+                height: 45vw
+
+
+
+
+
+
