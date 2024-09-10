@@ -36,13 +36,14 @@
             width: 60vw
             gap: 1em
             @include mixins.box_item
+            overflow: hidden
             opacity: 0
             &.visible
                 animation: slideRight .5s .5s ease-out forwards, opacity .5s .5s ease-out forwards
             p
                 font-family: var(--font-2)
                 font-size: 1.5vw
-                letter-spacing: 0.1em
+                letter-spacing: 0.01em
                 font-weight: 400
                 opacity: 0
                 &.visible

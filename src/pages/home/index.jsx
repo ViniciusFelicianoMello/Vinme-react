@@ -1,4 +1,4 @@
-import About from '../../containers/about'
+import AboutUs from '../../containers/aboutus'
 import Banner from '../../containers/banner'
 import './home.sass'
 
@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <main>
       <Banner />
-      <About />
+      <AboutUs />
     </main>
   )
 }

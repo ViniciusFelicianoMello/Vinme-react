@@ -1,0 +1,126 @@
+@use '../../../../styles/variables'
+@use '../../../../styles/mixins'
+@use '../../../../styles/keyframes'
+
+.history_split
+    position: relative
+    width: 50%
+    height: auto
+    display: flex
+    flex-direction: column
+    gap: 6vw
+    &:nth-last-child(1)
+        margin-top: 6vw
+    .history_split_item
+        position: relative
+        display: flex
+        flex-direction: column
+        width: 100%
+        height: 6vw
+        justify-content: center
+        .history_split_item_title
+            font-size: 1.4vw
+            color: var(--color-font)
+            padding-bottom: .1em
+            border-bottom: 2px solid var(--color-font)
+        .history_split_item_text     
+            font-size: 1.2vw
+            color: var(--color-font)
+            padding-bottom: .1em
+            opacity: .8
+            font-family: var(--font-2)
+        i
+            position: absolute
+            height: 2vw
+            width: 2vw
+            @include mixins.flex-center
+            @include mixins.gradient
+            border-radius: 50%
+            @include mixins.shadow-box
+            font-size: 1vw
+            transition: all .3s
+            &:hover
+                @include mixins.gradient_hover
+                
+    .history_split_item_left 
+        align-items: end
+        padding-right: 5em
+        &::before
+            content: ''
+            height: 4.5vh
+            width: 3.5em
+            border-bottom: 2px dashed var(--color-main-2)
+            position: absolute
+            top: 1.5vh
+            right: 1.2em
+        i
+            right: -1vw
+            &::after   
+                content: ''
+                width: 3vw
+                border-bottom: 2px dashed var(--color-main-2)
+                position: absolute
+                top: -2vw
+                left: -.5em
+                transform: rotate(90deg)
+    .history_split_item_right 
+        align-items: start
+        padding-left: 5em
+        &::before 
+            content: ''
+            height: 4.5vh
+            width: 3.5em
+            border-bottom: 2px dashed var(--color-main-2)
+            position: absolute
+            top: 1.5vh
+            left: 1.2em
+        i
+            left: -1vw
+            &::after
+                content: ''
+                width: 3vw
+                border-bottom: 2px dashed var(--color-main-2)
+                position: absolute
+                top: -2vw
+                left: -.5em
+                transform: rotate(90deg)
+
+@media screen and ( max-width: 1024px )
+    .history_split
+        gap: 6vh
+        &:nth-last-child(1)
+            margin-top: 6vh
+        .history_split_item
+            height: 6vh
+            .history_split_item_title
+                font-size: 3vw
+            .history_split_item_text     
+                font-size: 2.7vw
+            i
+                height: 5vw
+                width: 5vw
+                font-size: 2.5vw
+                    
+        .history_split_item_left
+            &::before
+                height: 0
+                width: 3.5em
+                top: 3vh
+                right: 1.2em
+            i
+                right: -2.5vw
+                &::after   
+                    top: -2vw
+                    left: .5em
+        .history_split_item_right 
+            &::before 
+                height: 0
+                width: 3.5em
+                top: 3vh
+                left: 1.2em
+            i
+                left: -2.5vw
+                &::after
+                    top: -2vw
+                    left: .5em
+    

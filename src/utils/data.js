@@ -33,3 +33,13 @@ export const info_boxes = [
   {id: 2, img: "svg/VINMEDESIGN.svg", alt: "Design", icon: "fa-solid fa-pen-nib", title: "Design"},
   {id: 3, img: "svg/VINMEBACK.svg", alt: "Backend", icon: "fa-solid fa-keyboard", title: "Back-End"},
 ]
+
+// ABOUT
+export const history = [
+  {id: 1, date: "29 / 05 / 2024", text: "Criação e planejamento", icon: "fa-solid fa-scroll", side: "left"},
+  {id: 2, date: "04 / 06 / 2024", text: "Pesquisa de concorrentes e revisão", icon: "fa-solid fa-magnifying-glass", side: "right"},
+  {id: 3, date: "12 / 06 / 2024", text: "Design e identidade visual", icon: "fa-solid fa-pen-nib", side: "left"},
+  {id: 4, date: "18 / 06 / 2024", text: "Desenvolvimento web com Front-end e Back-end", icon: "fa-solid fa-laptop-code", side: "right"},
+  {id: 5, date: "13 / 09 / 2024", text: "Lançamento do site", icon: "fa-solid fa-rocket", side: "left"},
+  {id: 6, date: "15 / 09 / 2024", text: "Primeiro trabalho realizado", icon: "fa-solid fa-laptop-file", side: "right"},
+]

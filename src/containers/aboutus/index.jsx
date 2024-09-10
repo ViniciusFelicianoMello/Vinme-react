@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import useOnScreen from '../../config/viewOnScreen'
-import './about.sass'
+import './aboutus.sass'
 import AboutInfos from './components/about_infos';
 
-const About = () => {
+const AboutUs = () => {
     const [isOnScreen, ref] = useOnScreen({ threshold: 0.1 });
   return (
     <section className='about' id='about'>
@@ -31,4 +31,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutUs

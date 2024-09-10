@@ -1,0 +1,89 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+@use '../../styles/keyframes'
+
+.history
+    @include mixins.container
+    background: var(--color-bg-3)
+    @include mixins.shadow-box
+    .history_time
+        margin-top: 1em
+        width: 100%
+        height: auto
+        position: relative
+        align-items: center
+        justify-content: center
+        font-family: var(--font-3)
+        opacity: 0 
+        &.visible
+            animation: slideUp 1s .5s forwards, opacity 1s .5s forwards
+        .history_start
+            width: 100%
+            height: 100%
+            position: relative
+            @include mixins.flex-center
+            z-index: 10
+            h3
+                height: 6vw
+                width: 6vw 
+                position: relative
+                z-index: 5
+                @include mixins.flex-center
+                border-radius: 50%
+                transition: all .3s
+                @include mixins.gradient
+                @include mixins.shadow-box
+                &:hover
+                    @include mixins.gradient_hover
+            .history_start_info
+                position: absolute
+                left: 60%
+                display: flex
+                flex-direction: column
+                align-items: start
+                justify-content: center
+                &::before
+                    content: ''
+                    width: 3.5em
+                    border-bottom: 2px dashed var(--color-main-2)
+                    position: absolute
+                    top: 4vh
+                    left: -38%
+                .history_start_info_title
+                    font-size: 1.4vw
+                    color: var(--color-font)
+                    padding-bottom: .1em
+                    border-bottom: 2px solid var(--color-font)
+                .history_start_info_text
+                    font-size: 1.2vw
+                    color: var(--color-font)
+                    padding-bottom: .1em
+                    opacity: .8
+                    font-family: var(--font-2)
+        .history_content
+            position: relative
+            width: 100%
+            height: auto
+            display: flex
+
+@media screen and (max-width:1024px)
+    .history
+        .history_time
+            .history_start
+                h3  
+                    height: 15vw
+                    width: 15vw
+                    font-size: 4vw
+                .history_start_info
+                    left: 65%
+                    &::before
+                        top: 2.8vh
+                        left: -30%
+                    .history_start_info_title
+                        font-size: 3vw
+                    .history_start_info_text
+                        font-size:2.7vw
+
+@media screen and (max-width:600px)
+    .history
+        margin-top: 1em
