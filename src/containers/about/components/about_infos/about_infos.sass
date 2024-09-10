@@ -1,0 +1,27 @@
+@use '../../../../styles/variables'
+@use '../../../../styles/mixins'
+@use '../../../../styles/keyframes'
+
+.about_infos_box
+    @include mixins.flex-center
+    flex-direction: column
+    @include mixins.box_item
+    height: 6vw
+    width: 90%
+    opacity: 0
+    font-size: 1vw
+    &.visible
+        &:nth-of-type(1)
+            animation: slideLeft .5s .5s ease-out forwards, opacity .5s .5s ease-out forwards
+        &:nth-of-type(2)
+            animation: slideLeft .5s 1s ease-out forwards, opacity .5s 1s ease-out forwards
+        &:nth-of-type(3)
+            animation: slideLeft .5s 1.5s ease-out forwards, opacity .5s 1.5s ease-out forwards
+    @media screen and (max-width:1024px)
+        height: 20vw
+        width: 50%
+        font-size: 2vw
+    @media screen and (max-width:600px)
+        height: 20vw
+        width: 90%
+        font-size: 4vw

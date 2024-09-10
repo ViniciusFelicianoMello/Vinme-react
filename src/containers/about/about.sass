@@ -1,0 +1,101 @@
+@use '../../styles/variables'
+@use '../../styles/mixins'
+@use '../../styles/keyframes'
+
+.about
+    @include mixins.container
+    .about_title
+        @include mixins.flex-center
+        flex-direction: column 
+        opacity: 0
+        transition: all 0.3s
+        margin-top: 2em
+        &.visible
+            animation: slideDown 0.5s ease-in forwards, opacity 1s ease-in-out forwards
+        h2 a
+            @include mixins.gradient_text
+            font-size: 2.5vw
+            font-family: var(--font-3)
+            font-weight: 400
+            transition: all .3s
+            &:hover
+                @include mixins.gradient_text_hover
+        h3  
+            font-family: var(--font-1)
+            font-size: 1.8vw
+            letter-spacing: 0.05em
+            color: var(--color-font)
+            font-weight: 900
+    .about_content
+        display: flex
+        margin-top: 2em
+        .about_text
+            display: flex
+            flex-direction: column
+            align-items: center
+            width: 60vw
+            gap: 1em
+            @include mixins.box_item
+            opacity: 0
+            &.visible
+                animation: slideRight .5s .5s ease-out forwards, opacity .5s .5s ease-out forwards
+            p
+                font-family: var(--font-2)
+                font-size: 1.5vw
+                letter-spacing: 0.1em
+                font-weight: 400
+                opacity: 0
+                &.visible
+                    &:nth-of-type(1)
+                        animation: slideRight .5s 1s ease-out forwards, opacity .5s 1s ease-out forwards
+                    &:nth-of-type(2)
+                        animation: slideRight .5s 1.5s ease-out forwards, opacity .5s 1.5s ease-out forwards
+
+        .about_infos
+            display: flex
+            flex-direction: column
+            width: 40%
+            justify-content: center
+            align-items: end
+            gap: 2vw
+
+@media screen and ( max-width: 1024px )
+    .about
+        .about_title
+            h2 a
+                font-size: 6vw
+            h3  
+                font-size: 4vw
+        .about_content
+            display: flex
+            flex-direction: column
+            margin-top: 3em
+            .about_text
+                width: 100%
+                gap: .5em
+                p
+                    font-size: 2.5vw
+
+            .about_infos
+                display: flex
+                flex-direction: row
+                width: 100%
+                gap: 3vw
+                margin-top: 3em
+@media screen and ( max-width: 600px )
+    .about
+        .about_title
+            h2 a
+                font-size: 10vw
+        .about_content
+            margin-top: 2em
+            .about_text
+                p
+                    font-size: 3vw
+
+            .about_infos
+                @include mixins.flex-center
+                flex-direction: column
+                width: 100%
+                gap: 4vh
+                margin-top: 2em

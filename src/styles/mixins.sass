@@ -6,6 +6,20 @@
   justify-content: center
   align-items: center
 
+@mixin container
+  position: relative
+  width: 100%
+  min-height: 100vh
+  max-height: max-content
+  padding: 2vw 10vw
+  overflow: hidden
+  @media screen and (max-width: 1024px)
+    min-height: 90vh
+    max-height: max-content
+    padding: 2vw 2vw
+  @media screen and (max-width: 600px)
+    padding: 1vw 1vw
+
 @mixin padding
   padding: 0 10vw
   @media (max-width: 1024px)
@@ -17,6 +31,43 @@
   box-shadow: 0 0 8px var(--color-shadow-1), 0 0 8px var(--color-shadow-1)
 @mixin shadow-box-2
   box-shadow: 0 0 6px var(--color-main-1), 0 0 6px var(--color-main-1)
+
+@mixin box_item
+  background: var(--color-bg-3)
+  @include shadow-box
+  border-radius: 1em
+  padding: 1em
+  transition: all .3s
+  @media screen and ( max-width: 1024px )
+    border-radius: .7em
+  @media screen and ( max-width: 600px )
+    border-radius: .5em
+  i
+    position: absolute
+    border: 1px solid var(--color-font)
+    padding: 0.5em
+    border-radius: 0.5em
+    top: -1em
+    left: 3rem
+    background: var(--color-bg-3)
+    @include shadow-box
+    font-size: 1.2vw
+    transition: transform .3s
+    @media screen and ( max-width: 1024px )
+      font-size: 4vw
+  span
+    color: var(--color-main)
+    font-weight: 700
+  &:hover
+    background: var(--color-bg-2)
+    @include shadow-box-2
+    color: var(--color-main)
+    i
+      border: 1px solid var(--color-main)
+      transform: rotateZ(180deg)
+      @include shadow-box-2
+    span 
+      color: var(--color-main-1)
 
 @mixin gradient 
   background: var(--gradient-1)
@@ -36,7 +87,6 @@
   color: transparent
   animation: btn 5s linear infinite
   transition: all .5s
-  color: var(--color-bg-3)
 
 @mixin gradient_hover
   background: var(--gradient-2)
@@ -46,3 +96,14 @@
   box-shadow: var(--neon-inset-1)
   color: var(--color-bg-5)
   transform: translateY(.3em)
+
+@mixin gradient_text_hover
+  background: var(--gradient-2)
+  background-size: 400% 100%
+  background-position: 0% 50%
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  color: transparent
+  animation: btn 5s linear infinite
+  transition: all .5s
