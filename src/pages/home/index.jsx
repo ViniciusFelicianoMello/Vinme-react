@@ -1,5 +1,6 @@
 import AboutUs from '../../containers/aboutus'
 import Banner from '../../containers/banner'
+import Services from '../../containers/services'
 import './home.sass'
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <main>
       <Banner />
       <AboutUs />
+      <Services />
     </main>
   )
 }

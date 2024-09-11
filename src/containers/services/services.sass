@@ -1,0 +1,49 @@
+@use '../../styles/keyframes'
+@use '../../styles/mixins'
+@use '../../styles/variables'
+
+.services
+    @include mixins.container
+    .services_bg
+        position: absolute
+        left: 0
+        height: 50vh
+        width: 100%
+        align-self: center
+        z-index: -1
+        margin-top: 8vh
+        display: flex 
+        .services_background
+            background: var(--color-main)
+            height: 100%
+            width: 55vw
+            &.visible
+                &:nth-of-type(1)
+                    animation: slideRight .5s linear forwards
+                &:nth-of-type(2)
+                    animation: slideLeft .5s linear forwards
+    .services_content
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+        padding: 0 6vw
+        width: 100%
+        gap: 3em
+        margin-top: 5vh
+@media screen and ( max-width: 1024px )
+    .services
+        .services_bg
+            margin-top: 17vh
+        .services_content
+            padding: 0 2vw
+            margin-top: 11%
+@media screen and ( max-width: 600px )
+    .services
+        .services_bg
+        .services_content
+            padding: 0 1vw
+            margin-top: 23%
+            gap: 1em
+    
+                    

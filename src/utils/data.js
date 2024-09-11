@@ -52,3 +52,13 @@ export const members = [
   {id: 5, image: 'https://github.com/ViniciusFelicianoMello.png', name: 'Vinicius Mello', title: 'Fundador', skills: ['Dono', 'Designer', 'Desenvolvedor', 'Analista', 'Atendente'], portfolio: 'https://portifolio-vinicius-mello.vercel.app/', linkedin: 'https://www.linkedin.com/in/vinicius-feliciano-mello/', instagram: 'https://www.instagram.com/viinifeliciano'},
   {id: 6, image: 'https://github.com/ViniciusFelicianoMello.png', name: 'Vinicius Mello', title: 'Fundador', skills: ['Dono', 'Designer', 'Desenvolvedor', 'Analista', 'Atendente'], portfolio: 'https://portifolio-vinicius-mello.vercel.app/', linkedin: 'https://www.linkedin.com/in/vinicius-feliciano-mello/', instagram: 'https://www.instagram.com/viinifeliciano'},
 ]
+
+// services
+export const services = [
+  { id : 1, icon: "fa-solid fa-laptop-code", title: "Web Design", desc: "Sites personalizados e responsivos, com diversas animações e interações"},
+  { id : 2, icon: "fa-solid fa-window-restore", title: "Ui / Ux", desc: "Desenvolvimento de interfaces intuitivas e atraentes para web e aplicativos"},
+  { id : 3, icon: "fa-solid fa-paintbrush", title: "Design Gráfico", desc: "Criação da identidade visual completa da sua marca, além de banners, panfletos ou qualquer outro material gráfico"},
+  { id : 4, icon: "fa-solid fa-server", title: "Programação", desc: "Manutenção e atualizações, com extrema segurança, desempenho e otimização, sempre implementando melhorias contínuas"},
+  { id : 5, icon: "fa-solid fa-database", title: "Banco de dados", desc: "Implementação e manutenção de banco de dados seguros e eficientes"},
+  { id : 6, icon: "fa-solid fa-robot", title: "Desenvolvimento", desc: "Criação de plataformas completas com diversos sistemas integrados"},
+]

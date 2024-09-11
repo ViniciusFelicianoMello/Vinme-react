@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import useOnScreen from '../../config/viewOnScreen'
 import './title.sass'
 
-const Title = ({ to, start, span, end, url }) => {
+const Title = ({ start, span, end, url }) => {
     const [isOnScreen, ref] = useOnScreen({ threshold: 0.1 });
-    if (to) {
+    if (url) {
         return (
             <div className='title'>
                 <h2 className={` section_title ${isOnScreen ? 'visible' : ''}`} ref={ref}>
