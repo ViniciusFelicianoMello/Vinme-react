@@ -5,11 +5,11 @@
 .about_infos_box
     @include mixins.flex-center
     flex-direction: column
-    @include mixins.box_item
     height: 6vw
     width: 90%
     opacity: 0
     font-size: 1vw
+    @include mixins.box_item
     &.visible
         &:nth-of-type(1)
             animation: slideLeft .5s .5s ease-out forwards, opacity .5s .5s ease-out forwards

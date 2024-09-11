@@ -43,3 +43,12 @@ export const history = [
   {id: 5, date: "13 / 09 / 2024", text: "Lançamento do site", icon: "fa-solid fa-rocket", side: "left"},
   {id: 6, date: "15 / 09 / 2024", text: "Primeiro trabalho realizado", icon: "fa-solid fa-laptop-file", side: "right"},
 ]
+
+export const members = [
+  {id: 1, image: 'https://github.com/ViniciusFelicianoMello.png', name: 'Vinicius Mello', title: 'Fundador', skills: ['Dono', 'Designer', 'Desenvolvedor', 'Analista', 'Atendente'], portfolio: 'https://portifolio-vinicius-mello.vercel.app/', linkedin: 'https://www.linkedin.com/in/vinicius-feliciano-mello/', instagram: 'https://www.instagram.com/viinifeliciano'},
+  {id: 2, image: 'https://github.com/ViniciusFelicianoMello.png', name: 'Vinicius Mello', title: 'Fundador', skills: ['Dono', 'Designer', 'Desenvolvedor', 'Analista', 'Atendente'], portfolio: 'https://portifolio-vinicius-mello.vercel.app/', linkedin: 'https://www.linkedin.com/in/vinicius-feliciano-mello/', instagram: 'https://www.instagram.com/viinifeliciano'},
+  {id: 3, image: 'https://github.com/ViniciusFelicianoMello.png', name: 'Vinicius Mello', title: 'Fundador', skills: ['Dono', 'Designer', 'Desenvolvedor', 'Analista', 'Atendente'], portfolio: 'https://portifolio-vinicius-mello.vercel.app/', linkedin: 'https://www.linkedin.com/in/vinicius-feliciano-mello/', instagram: 'https://www.instagram.com/viinifeliciano'},
+  {id: 4, image: 'https://github.com/ViniciusFelicianoMello.png', name: 'Vinicius Mello', title: 'Fundador', skills: ['Dono', 'Designer', 'Desenvolvedor', 'Analista', 'Atendente'], portfolio: 'https://portifolio-vinicius-mello.vercel.app/', linkedin: 'https://www.linkedin.com/in/vinicius-feliciano-mello/', instagram: 'https://www.instagram.com/viinifeliciano'},
+  {id: 5, image: 'https://github.com/ViniciusFelicianoMello.png', name: 'Vinicius Mello', title: 'Fundador', skills: ['Dono', 'Designer', 'Desenvolvedor', 'Analista', 'Atendente'], portfolio: 'https://portifolio-vinicius-mello.vercel.app/', linkedin: 'https://www.linkedin.com/in/vinicius-feliciano-mello/', instagram: 'https://www.instagram.com/viinifeliciano'},
+  {id: 6, image: 'https://github.com/ViniciusFelicianoMello.png', name: 'Vinicius Mello', title: 'Fundador', skills: ['Dono', 'Designer', 'Desenvolvedor', 'Analista', 'Atendente'], portfolio: 'https://portifolio-vinicius-mello.vercel.app/', linkedin: 'https://www.linkedin.com/in/vinicius-feliciano-mello/', instagram: 'https://www.instagram.com/viinifeliciano'},
+]
