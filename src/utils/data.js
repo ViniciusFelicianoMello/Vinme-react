@@ -62,3 +62,10 @@ export const services = [
   { id : 5, icon: "fa-solid fa-database", title: "Banco de dados", desc: "Implementação e manutenção de banco de dados seguros e eficientes"},
   { id : 6, icon: "fa-solid fa-robot", title: "Desenvolvimento", desc: "Criação de plataformas completas com diversos sistemas integrados"},
 ]
+
+// projects
+export const projects = [
+  { id: 1, image: '/img/frontend.png'},
+  { id: 2, image: '/img/design.png'},
+  { id: 3, image: '/img/Backend.png'},
+]
