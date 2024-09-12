@@ -107,3 +107,32 @@
   color: transparent
   animation: btn 5s linear infinite
   transition: all .5s
+
+@mixin vermais
+  position: absolute
+  bottom: 1em
+  left: 1em
+  @include gradient
+  padding: 0.2vw 1vw
+  border-radius: 0.3em
+  cursor: pointer
+  @include shadow-box
+  overflow: hidden
+  transition: all .3s
+  font-family: var(--font-3)
+  font-size: 1vw
+  &:hover
+    @include gradient_hover
+    @include shadow-box-2
+    transform: translateX(0.3em)
+    i
+      transform: translateX(.3em)
+      scale: 2
+  i
+     transition: .3s
+  @media screen and ( max-width: 1024px )
+    font-size: 2.5vw
+  @media screen and ( max-width: 600px )
+    font-size: 4vw
+    
+  

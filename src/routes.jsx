@@ -6,6 +6,7 @@ import Header from "./containers/header";
 import Footer from "./containers/footer";
 import Service from "./pages/service";
 import Project from "./pages/project";
+import Contact from "./pages/contact";
 
 function AppRoutes() {
   return (
@@ -16,6 +17,7 @@ function AppRoutes() {
         <Route path="/aboutus" element={<About />} /> 
         <Route path="/services" element={<Service />} /> 
         <Route path="/projects" element={<Project />} /> 
+        <Route path="/contact" element={<Contact />} />
 
         <Route path="*" element={<Notfound />} />
       </Routes>

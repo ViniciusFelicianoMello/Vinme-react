@@ -54,26 +54,7 @@
         transition: all 0.5s
 
     .vermais 
-        position: absolute
-        bottom: 1em
-        left: 1em
-        @include mixins.gradient
-        padding: 0.2vw 1vw
-        border-radius: 0.3em
-        cursor: pointer
-        @include mixins.shadow-box
-        overflow: hidden
-        transition: all .3s
-        font-family: var(--font-3)
-        &:hover
-            @include mixins.gradient_hover
-            @include mixins.shadow-box-2
-            transform: translateX(0.3em)
-            i
-                transform: translateX(.3em)
-                scale: 2
-        i
-            transition: .3s
+        @include mixins.vermais
 
 .services_modal
     @include mixins.flex-center
@@ -147,9 +128,6 @@
             margin-top: 8vw
             font-size: 3.5vw
 
-        .vermais 
-            font-size: 2.5vw
-
     .services_modal
         .services_modal_card
             border-radius: .7rem
@@ -166,9 +144,6 @@
         border-radius: .5em
         width: 45vw
         h3 
-            font-size: 4vw
-
-        .vermais 
             font-size: 4vw
 
     .services_modal

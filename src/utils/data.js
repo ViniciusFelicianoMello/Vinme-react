@@ -69,3 +69,14 @@ export const projects = [
   { id: 2, image: '/img/design.png'},
   { id: 3, image: '/img/Backend.png'},
 ]
+
+export const projectsList = [
+  { id: 1, image: '/img/frontend.png', link: '#',
+    images: ['/img/projects/vinme/vinme1.png', '/img/projects/vinme/vinme2.png', '/img/projects/vinme/vinme3.png']  },
+  { id: 2, image: '/img/frontend.png', link: '#',
+    images: ['/img/projects/vinme/vinme1.png', '/img/projects/vinme/vinme2.png', '/img/projects/vinme/vinme3.png']  },
+  { id: 3, image: '/img/frontend.png', link: '#',
+    images: ['/img/projects/vinme/vinme1.png', '/img/projects/vinme/vinme2.png', '/img/projects/vinme/vinme3.png']  },
+  { id: 4, image: '/img/frontend.png', link: '#',
+    images: ['/img/projects/vinme/vinme1.png', '/img/projects/vinme/vinme2.png', '/img/projects/vinme/vinme3.png']  },
+]
