@@ -80,3 +80,16 @@ export const projectsList = [
   { id: 4, image: '/img/frontend.png', link: '#',
     images: ['/img/projects/vinme/vinme1.png', '/img/projects/vinme/vinme2.png', '/img/projects/vinme/vinme3.png']  },
 ]
+
+// Contact
+export const faqs = [
+  {id: 1, question: 'O que é a VINME e porque nos escolher?', answer: 'A VINME é uma startup especializada em desenvolvimento web, back-end e design gráfico. Nosso diferencial é a combinação de criatividade, inovação e foco na satisfação do cliente. Oferecemos soluções personalizadas, colaboramos com nossos clientes para entregar as melhores soluções para seus problemas.'},
+  {id: 2, question: 'Vocês oferecem suporte e manutenção após a entrega do projeto?', answer: 'Sim, oferecemos suporte e manutenção contínua para garantir que seu website funcione perfeitamente. Estamos disponíveis para implementar atualizações, resolver problemas técnicos e fazer melhorias conforme necessário.'},
+  {id: 3, question: 'Qual é o processo de desenvolvimento de um website?', answer: 'Nosso processo de desenvolvimento web inclui uma reunião inicial para entender as suas necessidades e objetivos, planejamento e esboço do projeto, design de interface e experiencia do usuario, desenvolvimento e programação, testes e revisões, e por fim, lançamento e suporte pos-lançamento.'},
+  {id: 4, question: 'Como posso solicitar um orçamento para um projeto?', answer: 'Você pode solicitar um orçamento entrando em contato conosco através do formulário de contato em nosso site ou enviando um e-mail para vinme.geral@gmail.com. Nossa equipe retornará o contato o mais rápido possível para discutir os detalhes do seu projeto e fornecer um orçamento personalizado.'},
+  {id: 5, question: 'Quais são os prazos de entrega para os projetos?', answer: 'Os prazos de entrega variam dependendo da complexidade e do escopo do projeto. Após a reunião inicial, forneceremos um cronograma detalhado com os prazos estimados para cada etapa do projeto.'},
+  {id: 6, question: 'Como funciona o processo de criação de identidade visual?', answer: 'O processo de criação de identidade visual inclui reunião inicial para entender a visão e os valores da sua marca, pesquisa e brainstorming de conceitos, desenvolvimento de esboços e propostas, revisões e ajustes com base no seu feedback e entrega dos arquivos finais em diversos formatos para uso em diferentes mídias.'},
+  {id: 7, question: 'Vocês trabalham com empresas de quais setores?', answer: 'Trabalhamos com empresas de diversos setores, incluindo tecnologia, e-commerce, saúde, educação, entretenimento e muito mais. Nossa abordagem flexível nos permite adaptar nossos serviços às necessidades específicas de cada cliente.'},
+  {id: 8, question: 'Quais são as garantias oferecidas pela VINME?', answer: 'Garantimos a entrega de serviços de alta qualidade, alinhados com as suas expectativas. Oferecemos suporte pós-lançamento para resolver qualquer problema que possa surgir e garantir a satisfação do cliente.'},
+  {id: 9, question: 'Vocês fazem redesign de sites existentes?', answer: 'Sim, oferecemos serviços de redesign para modernizar e melhorar a performance de sites existentes. Analisamos o site atual, identificamos áreas de melhoria e implementamos um novo design alinhado com as melhores práticas e tendências atuais.'},
+]

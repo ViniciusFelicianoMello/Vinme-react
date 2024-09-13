@@ -1,0 +1,86 @@
+@use '../../styles/keyframes'
+@use '../../styles/variables'
+@use '../../styles/mixins'
+
+.faq
+    @include mixins.container
+    .faq_content
+        position: relative
+        display: flex
+        height: 100%
+        width: 100%
+        justify-content: center
+        align-items: center
+        margin-top: 2em
+        .faq_question
+            position: relative
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            align-items: start
+            gap: 2em
+            .faq_box
+                position: relative
+                display: flex
+                flex-direction: column
+                width: 30%
+                height: 15vh
+                overflow: hidden
+                @include mixins.box_item
+                transition: height .3s ease-in-out
+                opacity: 0
+                &.visible
+                    animation: slideUp 2s 1s forwards, opacity 2s 1s forwards
+
+                &.expanded
+                    height: 24vh
+                    .faq_answer
+                        opacity: 1
+                    .faq_dropdown_seta
+                        transform: rotate(-180deg)
+                .faq_ask
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    font-size: 1vw
+                    cursor: pointer
+                    height: 12vh
+                    font-family: var(--font-1)
+                    .faq_dropdown_seta
+                        transition: all .3s
+                .faq_answer
+                    font-family: var(--font-2)
+                    font-size: 1vw
+                    opacity: 0
+                    transition: all .3s
+@media screen and (max-width: 1024px)
+    .faq
+        .faq_content
+            .faq_question
+                gap: 1em
+                .faq_box
+                    width: 48%
+                    height: 10vh
+
+                    &.expanded
+                        height: 25vh
+                    .faq_ask
+                        font-size: 2.3vw
+                        height: 8vh
+                    .faq_answer
+                        font-size: 2.3vw
+@media screen and (max-width: 1024px)
+    .faq
+        .faq_content
+            .faq_question
+                .faq_box
+                    width: 100%
+                    height: 7vh
+                    padding: .5em
+
+                    &.expanded
+                    .faq_ask
+                        font-size: 3vw
+                        height: 8vh
+                    .faq_answer
+                        font-size: 3.3vw
