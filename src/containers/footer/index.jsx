@@ -40,7 +40,7 @@ const Footer = () => {
           <h2 className="footer_links_title">MAIS VINME</h2>
           <ul>
             {mais_vinme.map(link => (
-              <Link key={link.id} className='footer_link' to={link.url}>
+              <Link key={link.id} className='footer_link' to={link.url} target='_blank'>
                 <i className={link.icon}></i>
                 <strong>{link.name}</strong>
               </Link>

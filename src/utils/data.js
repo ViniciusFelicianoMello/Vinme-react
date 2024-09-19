@@ -7,7 +7,7 @@ export const vinme_links = [
   ];
 
 export const social_links = [
-  { id: 1, name: 'instagram', url: 'https://instagram.com/viinifeliciano',icon: 'fa-brands fa-instagram' },
+  { id: 1, name: 'instagram', url: 'https://www.instagram.com/vinme.dev/',icon: 'fa-brands fa-instagram' },
   { id: 2, name: 'linkedin', url: 'https://www.linkedin.com/in/vinicius-feliciano-mello',icon: 'fa-brands fa-linkedin-in' },
   { id: 3, name: 'youtube', url: 'https://www.youtube.com/channel/UCPaMfm0d54sSeaX2RsCAB4A',icon: 'fa-brands fa-youtube' },
   { id: 4, name: 'behance', url: 'https://www.behance.net/',icon: 'fa-brands fa-behance' },
