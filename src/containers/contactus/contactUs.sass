@@ -2,6 +2,168 @@
 @use '../../styles/variables'
 @use '../../styles/mixins'
 
+// OPEN FORMS
+@keyframes openContactForm 
+    0%
+        width: 0
+    70%
+        width: 50vw
+        height: 0
+    100%
+        height: 60vh
+        width: 50vw
+
+@keyframes openContactFormTablet
+    0%
+        width: 0
+    70%
+        width: 90vw
+        height: 0
+    100%
+        height: 60vh
+        width: 90vw
+
+@keyframes openContactFormMobile
+    0%
+        width: 0
+    70%
+        width: 90vw
+        height: 0
+    100%
+        height: 100%
+        width: 90vw
+
 .contact
     @include mixins.container
-    
+    .contact_content
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 60vh
+        margin-top: 5vh
+        .contact_box
+            position: relative
+            display: flex
+            justify-content: space-evenly
+            align-items: center
+            overflow: hidden
+            height: 0
+            width: 0
+            @include mixins.shadow-box
+            border-radius: 2em
+            border: 1px solid var(--color-main-1)
+            backdrop-filter: blur(4px)
+            height: 0em
+            @include mixins.before-form
+            gap: 1em
+            &.visible
+                animation: openContactForm 1s 2s forwards
+            .contact_form
+                z-index: 1
+                padding: 1em
+                background: var(--color-bg-3)
+                border-radius: 1em
+                height: 80%
+                width: 40%
+                @include mixins.shadow-box
+                margin: 0 0 0 2em
+                h3
+                    position: relative
+                    font-family: var(--font-1)
+                    font-size: 1.2vw
+                    span
+                        @include mixins.gradient_text
+            .contact_infos
+                z-index: 1
+                display: flex
+                justify-content: center
+                align-items: center
+                flex-direction: column
+                margin: 0 2em 0 0
+                ul
+                    display: flex
+                    flex-direction: column
+                    list-style: none
+                    gap: 3vh
+                    li
+                        font-family: var(--font-2)
+                        letter-spacing: 0.02em
+                        font-weight: bolder
+                        font-size: 1.3vw
+                        transition: all .3s
+                        a
+                            display: flex
+                            align-items: center
+                            text-decoration: none
+                            color: var(--color-font)
+                            transition: all .3s
+                            gap: 1em
+                        i
+                            @include mixins.flex-center
+                            color: var(--color-main)
+                            border-radius: 50%
+                            border: 1px solid var(--color-main)
+                            background: var(--color-bg-3)
+                            height: 2em
+                            width: 2em
+                        &:hover
+                            transform: translateY(.2em)
+                            a
+                                color: var(--color-main-1)
+                            i
+                                color: var(--color-main-1)
+                                border: 1px solid var(--color-main-1)
+
+@media screen and ( max-width: 1024px )
+    .contact
+        .contact_content
+            .contact_box
+                border-radius: 1em
+                &.visible
+                    animation: openContactFormTablet 1s 2s forwards
+                .contact_form
+                    width: 60%
+                    border-radius: .7em
+                    h3
+                        font-size: 4vw
+                .contact_infos
+                    ul
+                        gap: 2vh
+                        li
+                            font-size: 2vw
+                            a
+                                gap: .5em
+                            i
+                                height: 3em
+                                width: 3em
+@media screen and ( max-width: 600px )
+    .contact
+        .contact_content
+            height: 90vh
+            margin-bottom: 3em
+            .contact_box
+                border-radius: .7em
+                flex-direction: column
+                &.visible
+                    animation: openContactFormMobile 1s 2s forwards
+                .contact_form
+                    width: 95%
+                    height: 60%
+                    border-radius: .5em
+                    margin: 0
+                    h3
+                        font-size: 4vw
+                .contact_infos
+                    ul                 
+                        margin-left: 11%
+                        justify-content: flex-start
+                        align-items: center
+                        flex-direction: row
+                        flex-wrap: wrap
+                        gap: 2vh
+                        li
+                            font-size: 2.5vw
+                            width: 46%
+
+
+

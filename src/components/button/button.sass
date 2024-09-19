@@ -23,4 +23,30 @@
         transform: translateY(3px)
     @media screen and (max-width: 1024px)
         font-size: 3vw
+
+.link
+    width: 100%
+    height: 100%
+    cursor: pointer
+    text-wrap: nowrap
+    border-radius: .5rem
+    border: none
+    outline: none
+    text-decoration: none
+    font-weight: 400
+    font-family: var(--font-3)
+    font-size: 1.2vw
+    padding: .5em 0
+    @include mixins.flex-center
+    @include mixins.shadow-box
+    transition: .3s
+    background: var(--color-bg-1)
+    color: var(--color-font)
+    &:hover
+        transform: translateY(3px)
+        @include mixins.shadow-box-2
+        color: var(--color-main-1)
+        background: var(--color-bg-2)
+    @media screen and (max-width: 1024px)
+        font-size: 3vw
         

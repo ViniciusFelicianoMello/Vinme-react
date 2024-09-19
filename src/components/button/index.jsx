@@ -2,17 +2,17 @@
 import { Link } from 'react-router-dom';
 import './button.sass';
 
-const Button = ({ type = 'button', to, children, onClick }) => {
+const Button = ({ type = 'button', classe, to, children, onClick }) => {
   if (to) {
     return (
-      <Link to={to} className='button'>
+      <Link to={to} className={classe}>
         {children}
       </Link>
     );
   }
 
   return (
-    <button type={type} onClick={onClick} className='button'>
+    <button type={type} onClick={onClick} className={classe}>
       {children}
     </button>
   );

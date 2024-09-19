@@ -31,7 +31,7 @@ const Banner = () => {
           </div>
 
           <div className={`banner_text_btn ${isOnScreen ? 'visible' : ''}`}>
-            <Button to="/contato">
+            <Button to="/contato" classe="button">
               Eleve seu negócio ao próximo nível
             </Button>
           </div>
